@@ -1,0 +1,7 @@
+# Block direct web access to shared bootstrap (endpoints include it via require)
+<Files "bootstrap.php">
+  Require all denied
+  <IfModule !mod_authz_core.c>
+    Deny from all
+  </IfModule>
+</Files>

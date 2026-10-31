@@ -1,0 +1,66 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Free SEO & Site Speed Checker | Drunall Audit Tool</title><meta name="description" content="Free SEO, site speed audit and technical SEO checker. Find what holds your Google ranking back — SSL, meta tags, sitemap, alt text, and more."><link rel="shortcut icon" href="favicon.ico"><link rel="icon" href="favicon.ico"><link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png"><link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=10"></head><body><main class="shell"><header class="topbar"><a class="brand" href="/"><img class="brand-mark" src="favicon-32x32.png" alt=""><span>Drunall Audit Tool</span></a><div class="topbar-actions"><button class="icon-button" id="historyButton" title="Audit history"><i data-lucide="history"></i></button><button class="icon-button" id="exportButton" title="Export JSON"><i data-lucide="download"></i></button></div></header><section class="hero" id="start"><p class="eyebrow">Free SEO audit & site speed checker</p><h1>Know what is holding your site back.</h1><p class="hero-copy">Free SEO, site speed audit and technical SEO checks on your URL.</p><form class="audit-form" id="auditForm"><div class="field url-field"><i data-lucide="globe-2"></i><input id="siteUrl" type="text" inputmode="url" autocomplete="url" placeholder="https://drunall.com" required></div><button class="primary-button" id="runButton"><span>Run SEO audit</span><i data-lucide="arrow-right"></i></button></form><p class="form-note"><i data-lucide="shield-check"></i>private-network addresses are blocked. SEO reports stay in this browser.</p></section><section id="skeleton" hidden><div class="loading-head"><p class="eyebrow">Running SEO & speed audit</p><h2>Checking SEO and site speed signals</h2><p>HTTP, SSL, SEO meta tags, site speed signals, resources, links, and platform checks are being reviewed.</p></div><div class="skeleton-grid"><i></i><i></i><i></i><i></i></div><div class="skeleton-panel"></div></section><section class="report" id="report" hidden><div class="report-heading"><div><p class="eyebrow">SEO audit report</p><h2 id="domain"></h2><p class="crawl-meta" id="meta"></p></div><button class="outline-button" id="newAuditButton"><i data-lucide="rotate-ccw"></i> New audit</button></div><div class="site-signals" id="siteSignals"><article class="signal" data-signal="platform"><i class="signal-icon" data-lucide="layers"></i><div><span>Platform</span><b id="platform"></b><small id="platformDetail"></small></div></article><article class="signal" data-signal="ssl"><i class="signal-icon" data-lucide="shield-check"></i><div><span>SSL / HTTPS</span><b id="sslValue"></b><small id="sslDetail"></small></div></article><article class="signal" data-signal="gtag"><i class="signal-icon" data-lucide="tag"></i><div><span>Google tag</span><b id="gtagValue"></b><small id="gtagDetail"></small></div></article><article class="signal" data-signal="cookie"><i class="signal-icon" data-lucide="cookie"></i><div><span>Cookie consent</span><b id="cookieValue"></b><small id="cookieDetail"></small></div></article></div><p class="protocol-warning" id="protocolWarning" hidden><i data-lucide="triangle-alert"></i> This site uses HTTP. Move to HTTPS and redirect every HTTP URL to its secure equivalent.</p><div class="accordion" id="reportAccordion">
+<details class="accordion-item" data-panel="overview" open>
+<summary class="accordion-summary"><span>Overview</span><i data-lucide="chevron-down"></i></summary>
+<div class="accordion-body" id="overview">
+<section class="impression-wrap">
+<p class="eyebrow">First impression</p>
+<h3>SEO health graph</h3>
+<section class="first-impression" id="firstImpression"></section>
+</section>
+<div class="score-grid" id="scoreGrid"></div>
+<section class="panel load-shots-panel">
+<div class="panel-title"><div><p class="eyebrow">Site speed visuals</p><h3>First paint to full load</h3></div></div>
+<p class="crawl-meta">Live website screenshots shown from first paint through full load. Earlier frames reveal the capture progressively; the last frame is the complete page.</p>
+<div class="load-shots" id="loadShots"></div>
+</section>
+<div class="content-grid">
+<section class="panel">
+<div class="panel-title"><div><p class="eyebrow">Metrics</p><h3>FCP, LCP, TBT, CLS & Speed Index</h3></div>
+<div class="device-switch"><button class="device active" data-device="mobile"><i data-lucide="smartphone"></i> Mobile</button><button class="device" data-device="desktop"><i data-lucide="monitor"></i> Desktop</button></div></div>
+<div class="psi-legend" id="psiLegend" hidden><span class="psi-good"><i></i> 90–100</span><span class="psi-avg"><i></i> 50–89</span><span class="psi-poor"><i></i> 0–49</span></div><div class="metrics psi-metrics" id="metrics"></div>
+</section>
+<section class="panel">
+<p class="eyebrow">SEO & technical scope</p>
+<h3>What affects Google ranking</h3>
+<div class="scope-list"><span>SEO title, description, canonical</span><span>SSL / HTTPS & redirects</span><span>Site speed signals</span><span>GTM, Google tag, cookie banner</span><span>Images, H1 tags, sitemap, links</span></div>
+</section>
+</div>
+</div>
+</details>
+<details class="accordion-item" data-panel="issues">
+<summary class="accordion-summary"><span>SEO issues <b id="issueCount">0</b></span><i data-lucide="chevron-down"></i></summary>
+<div class="accordion-body" id="issues"><section class="panel"><div class="panel-title"><div><p class="eyebrow">Ranking fix plan</p><h3>SEO & site issues</h3></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="critical">Critical</button><button class="filter" data-filter="warning">Warnings</button><button class="filter" data-filter="opportunity">Opportunities</button></div></div><div class="issue-list" id="issueList"></div></section></div>
+</details>
+<details class="accordion-item" data-panel="pages">
+<summary class="accordion-summary"><span>Sitemap SEO</span><i data-lucide="chevron-down"></i></summary>
+<div class="accordion-body" id="pages"><section class="panel"><div class="panel-title"><div><p class="eyebrow">Sitemap SEO crawl</p><h3>Page-by-page ranking review</h3></div></div><p class="crawl-meta">URLs from sitemap.xml are checked sequentially for SEO signals. Active page and result stay visible without delaying the first report.</p><div class="sitemap-url" id="sitemapUrl">No sitemap.xml found</div><div class="sitemap-stats" id="sitemapStats"></div><div class="page-rows" id="pageRows"></div></section></div>
+</details>
+<details class="accordion-item" data-panel="seo">
+<summary class="accordion-summary"><span>SEO meta</span><i data-lucide="chevron-down"></i></summary>
+<div class="accordion-body" id="seo"><section class="panel" id="seoList"></section></div>
+</details>
+<details class="accordion-item" data-panel="technology">
+<summary class="accordion-summary"><span>Technology</span><i data-lucide="chevron-down"></i></summary>
+<div class="accordion-body" id="technology"><section class="panel" id="technologyList"></section></div>
+</details>
+<details class="accordion-item" data-panel="alt">
+<summary class="accordion-summary"><span>Alt text</span><i data-lucide="chevron-down"></i></summary>
+<div class="accordion-body" id="alt"><section class="panel" id="altList"></section></div>
+</details>
+<details class="accordion-item" data-panel="h1">
+<summary class="accordion-summary"><span>H1 headings</span><i data-lucide="chevron-down"></i></summary>
+<div class="accordion-body" id="h1"><section class="panel" id="h1List"></section></div>
+</details>
+<details class="accordion-item" data-panel="external">
+<summary class="accordion-summary"><span>External links</span><i data-lucide="chevron-down"></i></summary>
+<div class="accordion-body" id="external"><section class="panel" id="externalList"></section></div>
+</details>
+<details class="accordion-item" data-panel="assets">
+<summary class="accordion-summary"><span>Assets</span><i data-lucide="chevron-down"></i></summary>
+<div class="accordion-body" id="assets"><div class="content-grid assets-grid"><section class="panel"><p class="eyebrow">Scripts</p><h3>Third-party impact on site speed</h3><div class="asset-list" id="scriptList"></div></section><section class="panel"><p class="eyebrow">Media</p><h3>Heavy assets slowing the page</h3><div class="asset-list" id="assetList"></div></section></div></div>
+</details>
+<details class="accordion-item" data-panel="console">
+<summary class="accordion-summary"><span>Errors</span><i data-lucide="chevron-down"></i></summary>
+<div class="accordion-body" id="console"><section class="panel"><p class="eyebrow">Resource health</p><h3>Fetch & response checks</h3><div class="console-list" id="consoleList"></div></section></div>
+</details>
+</div></section></main><aside class="history-drawer" id="historyDrawer"><div class="drawer-head"><div><p class="eyebrow">Saved locally</p><h2>SEO audit history</h2></div><button class="icon-button" id="closeHistory"><i data-lucide="x"></i></button></div><div id="historyList" class="history-list"></div><button id="clearHistory" class="danger-button"><i data-lucide="trash-2"></i> Clear saved SEO reports</button></aside><footer class="site-footer">©<a href="https://drunall.com/" target="_blank" rel="noopener">Drunall,</a>Inc. All rights reserved.</footer><div class="toast" id="toast"></div><script src="https://unpkg.com/lucide@latest"></script><script src="app.js?v=10"></script></body></html>

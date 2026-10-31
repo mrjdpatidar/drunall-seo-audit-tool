@@ -1,0 +1,20 @@
+DirectoryIndex index.html index.php
+
+# Block hidden / sensitive paths
+RewriteEngine On
+RewriteRule (^|/)\. - [F,L]
+RewriteRule ^storage/ - [F,L]
+RewriteRule ^api/bootstrap\.php$ - [F,L]
+
+# Optional: force HTTPS when certificate is active on app.drunall.com
+# RewriteCond %{HTTPS} !=on
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Do not list directories
+Options -Indexes

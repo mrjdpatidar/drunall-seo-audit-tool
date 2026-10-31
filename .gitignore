@@ -1,0 +1,23 @@
+# secrets & env
+.env
+.env.*
+!.env.example
+
+# runtime caches / rate limits
+storage/rate-limit/
+storage/pagespeed/
+storage/*.json
+!storage/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+
+# temp probes
+_*.php
+_*.js
+_*.txt
+*.tmp
