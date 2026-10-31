@@ -8,9 +8,9 @@ Audit any public URL for Google ranking signals, Core Web Vitals (FCP, LCP, TBT,
 
 ---
 
-## Keywords / topics (for search & AI discovery)
+## Keywords / topics
 
-`SEO audit` · `free SEO checker` · `site speed audit` · `PageSpeed Insights` · `Core Web Vitals` · `FCP` · `LCP` · `TBT` · `CLS` · `Speed Index` · `technical SEO` · `sitemap crawl` · `broken links` · `SSL HTTPS check` · `meta title description canonical` · `Google ranking` · `website health` · `React Vite Shopify WordPress detection` · `PHP SEO tool` · `Hostinger deploy`
+`SEO audit` · `free SEO checker` · `site speed audit` · `PageSpeed Insights` · `Core Web Vitals` · `FCP` · `LCP` · `TBT` · `CLS` · `Speed Index` · `technical SEO` · `sitemap crawl` · `broken links` · `SSL HTTPS check` · `meta title description canonical` · `Google ranking` · `website health` · `React Vite Shopify WordPress detection` · `PHP SEO tool`
 
 ---
 
@@ -28,20 +28,12 @@ Audit any public URL for Google ranking signals, Core Web Vitals (FCP, LCP, TBT,
 
 ---
 
-## Suggested GitHub repo name
-
-**`drunall-seo-audit`**
-
-Alternatives: `free-seo-speed-audit` · `website-seo-checker` · `pagespeed-seo-audit-tool`
-
----
-
 ## Stack
 
 - Frontend: HTML / CSS / vanilla JS  
 - Backend: PHP 8+ (`api/*.php`)  
 - Needs: `curl`, JSON, writable `storage/`  
-- Optional local Node helper: `server.mjs` (not required on Hostinger)
+- Optional local Node helper: `server.mjs`
 ---
 
 ## Privacy
